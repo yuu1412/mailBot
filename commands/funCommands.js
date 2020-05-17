@@ -16,12 +16,13 @@ module.exports = {
 	quirkfactor: function(message, args) {
 		let numA = Math.floor(Math.random()*quirkList.length);
 		let numB = Math.floor(Math.random()*quirkList.length);
-		message.channel.reply('you have a ' + quirkList[numA] + ' or a ' +  quirkList[numB] + ' quirk!');
+		message.channel.send('you have a ' + quirkList[numA] + ' or a ' +  quirkList[numB] + ' quirk!');
 	},
 	quirkpls: function(message, args) {
 		let num = Math.floor(Math.random()*quirkList.length);
 		let chosenQuirk = quirkList[num];
-		message.channel.reply('you have a ' + chosenQuirk + ' quirk!');
+		let theUser = message.author.id;
+		message.channel.send('<@' + theUser + '>, you have a ' + chosenQuirk + ' quirk!');
 	},
 	quirkplz: function(message, args) {
 		this.quirkpls(message, args);
