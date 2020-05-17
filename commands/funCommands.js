@@ -15,8 +15,9 @@ module.exports = {
 	},
 	quirkfactor: function(message, args) {
 		let numA = Math.floor(Math.random()*quirkList.length);
-		let numB = Math.floor(Math.random()*quirkList.length);
-		message.channel.send('you have a ' + quirkList[numA] + ' or a ' +  quirkList[numB] + ' quirk!');
+		let numB = Math.floor(Math.random()*quirkList.length);		
+		let theUser = message.author.id;
+		message.channel.send('<@' + theUser + '>, you have a ' + quirkList[numA] + ' or a ' +  quirkList[numB] + ' quirk!');
 	},
 	quirkpls: function(message, args) {
 		let num = Math.floor(Math.random()*quirkList.length);
