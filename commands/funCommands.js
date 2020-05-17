@@ -21,7 +21,7 @@ module.exports = {
 	quirkpls: function(message, args) {
 		let num = Math.floor(Math.random()*quirkList.length);
 		let chosenQuirk = quirkList[num];
-		message.channel.send('you have a ' + chosenQuirk + ' quirk!');
+		message.channel.send('${user}, you have a ' + chosenQuirk + ' quirk!');
 	},
 	quirkplz: function(message, args) {
 		this.quirkpls(message, args);
@@ -32,7 +32,7 @@ module.exports = {
 		var diceType = +(args[1].replace('d', ""));
 		var out = "And it's"
 		for (var i=0;i<diceNum;i++) {
-			out += "\n" + Math.round(Math.random() * diceType);
+			out += "\n" + Math.floor(Math.random() * Math.floor(diceType)+1); //Math.round(Math.random() * diceType);
 		}
 		message.channel.send(out);
 	},
