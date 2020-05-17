@@ -43,6 +43,7 @@ module.exports = {
 			.catch(function(err) 
 			{ console.log(err) });
 	},
+	/*
 	sprint: function(message, args) {
 		//make sure the sprint isn't in a dm
 		if (message.guild === null) return;
@@ -90,6 +91,7 @@ module.exports = {
 			message.channel.send("A sprint is already running, get to writing");
 		}
 	}
+	*/
 }
 
 //a custom timer function for the sprint command
