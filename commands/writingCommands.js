@@ -11,7 +11,7 @@ var preSprintTimeouts = {};
 module.exports = {
 	ficrec: function(message, args) {
 		//Of our list of users we will grab a random user
-		var url = "https://archiveofourown.org/users/-username-/pseuds/-username-/bookmarks";
+		var url = "https://archiveofourown.org/users/-username-/bookmarks";
 		var username = ao3Users[Math.floor(Math.random() * ao3Users.length)];
 		url = url.replace("-username-", username).replace("-username-", username);
 
